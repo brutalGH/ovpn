@@ -50,7 +50,7 @@ class Server(threading.Thread):
 
     def printLog(self, log):
         self.logLock.acquire()
-        print log 
+        print log
         self.logLock.release()
 
     def addConn(self, conn):
@@ -125,7 +125,7 @@ class ConnectionHandler(threading.Thread):
 
             if hostPort != '':
                 passwd = self.findHeader(self.client_buffer, 'X-Pass')
-				
+                
                 if len(PASS) != 0 and passwd == PASS:
                     self.method_CONNECT(hostPort)
                 elif len(PASS) != 0 and passwd != PASS:
@@ -134,14 +134,14 @@ class ConnectionHandler(threading.Thread):
                     self.method_CONNECT(hostPort)
                 else:
                     self.client.send('HTTP/1.1 403 Forbidden!\r\n\r\n')
-            else 
-                print '- No X-Real-Host!')
+            else:
+                print '- No X-Real-Host!'
                 self.client.send('HTTP/1.1 400 NoXRealHost!\r\n\r\n')
 
         except Exception as e:
             self.log += ' - error: ' + e.strerror
             self.server.printLog(self.log)
-            pass
+        pass
         finally:
             self.close()
             self.server.removeConn(self)
@@ -199,20 +199,20 @@ class ConnectionHandler(threading.Thread):
                 error = True
             if recv:
                 for in_ in recv:
-                    try:
+            try:
                         data = in_.recv(BUFLEN)
                         if data:
-                            if in_ is self.target:
-                                self.client.send(data)
+                if in_ is self.target:
+                self.client.send(data)
                             else:
                                 while data:
                                     byte = self.target.send(data)
                                     data = data[byte:]
 
                             count = 0
-                        else:
-                            break
-                    except:
+            else:
+                break
+            except:
                         error = True
                         break
             if count == TIMEOUT:
@@ -256,7 +256,7 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
         try:
             time.sleep(2)
         except KeyboardInterrupt:
-            print'Stopping...'
+            print 'Stopping...'
             server.close()
             break
 
