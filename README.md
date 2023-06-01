@@ -10,7 +10,7 @@ Best Vpn Script
 ## Installation Link if you already have a domain and have been pointed ns domain<br>
 
   ```html
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://www.foryouvpn.my.id/setup1.sh && chmod +x setup1.sh && ./setup1.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/brutalGH/install/main/setup1.sh && chmod +x setup1.sh && ./setup1.sh
 
   ```
 ## Installation Link if you don't have a domain<br>
