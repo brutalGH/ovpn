@@ -23,3 +23,4 @@ echo "$pp" > /etc/v2ray/domain
 rm -rf /etc/root/domain
 echo $pp > /root/domain
 echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
+genssl
