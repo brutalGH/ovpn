@@ -34,14 +34,14 @@ wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com
 systemctl daemon-reload
 
 #Enable & Start & Restart ws-openssh service
-systemctl enable ws-openssh.service
-systemctl start ws-openssh.service
-systemctl restart ws-openssh.service
+systemctl enable service-wsopenssh.service
+systemctl start service-wsopenssh.service
+systemctl restart service-wsopenssh.service
 
 #Enable & Start & Restart ws-dropbear service
-systemctl enable ws-dropbear.service
-systemctl start ws-dropbear.service
-systemctl restart ws-dropbear.service
+systemctl enable service-wsdropbear.service.service
+systemctl start service-wsdropbear.service.service
+systemctl restart service-wsdropbear.service.service
 
 #Enable & Start & Restart ws-openssh service
 systemctl enable ws-stunnel.service
