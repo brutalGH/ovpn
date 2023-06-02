@@ -21,7 +21,7 @@ chmod +x /usr/local/bin/ws-stunnel
 wget -O /etc/systemd/system/service-wsopenssh.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsopenssh.service && chmod +x /etc/systemd/system/service-wsopenssh.service
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/service-wsdropbear.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsdropbear.service && chmod +x /etc/systemd/service-wsdropbear.service
+wget -O /etc/systemd/system/service-wsdropbear.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsdropbear.service && chmod +x /etc/systemd/system/service-wsdropbear.service
 
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
