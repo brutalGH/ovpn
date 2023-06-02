@@ -110,13 +110,12 @@ echo -e "      $COLOR1┌──────────────────�
 echo -e "      $COLOR1│${NC}                •  brutalOVPN  •                 $COLOR1│$NC"
 echo -e "      $COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
-echo -e " ${CYAN}[01]${NC} • [SSH MENU${NC}]${CYAN}[08]${NC} • [INSTALL ADS-BLOCK${NC}]${CYAN}[15]${NC} • [RUNNING${NC}]"
-echo -e " ${CYAN}[02]${NC} • [VMESS${NC}]   ${CYAN}[09]${NC} • [ADS-BLOCK MENU${NC}]   ${CYAN}[16]${NC} • [SPEEDTEST${NC}]"
-echo -e " ${CYAN}[03]${NC} • [VLESS${NC}]   ${CYAN}[10]${NC} • [CEK-TRAFIK${NC}]       ${CYAN}[17]${NC} • [INFO${NC}]"
-echo -e " ${CYAN}[04]${NC} • [TROJAN${NC}]  ${CYAN}[11]${NC} • [CEK BANDWIDTH${NC}]    ${CYAN}[18]${NC} • [CLEARLOG${NC}]"
-echo -e " ${CYAN}[05]${NC} • [SSWS ${NC}]   ${CYAN}[12]${NC} • [UPDATE-SCRIPT${NC}]    ${CYAN}[19]${NC} • [REBOOT${NC}]"
-echo -e " ${CYAN}[06]${NC} • [ADD-HOST${NC}]${CYAN}[13]${NC} • [RESTART SERVICE${NC}]     "
-echo -e " ${CYAN}[07]${NC} • [GEN-CERT${NC}]${CYAN}[14]${NC} • [AUTO-POINTING${NC}] "
+echo -e " ${CYAN}[01]${NC} • SSH MENU${NC} ${CYAN}[07]${NC} • INSTALL ADS-BLOCK${NC} ${CYAN}[13]${NC} • DOMAIN${NC}"
+echo -e " ${CYAN}[02]${NC} • VMESS${NC}    ${CYAN}[08]${NC} • ADS-BLOCK MENU${NC}    ${CYAN}[14]${NC} • RUNNING${NC}"
+echo -e " ${CYAN}[03]${NC} • VLESS${NC}    ${CYAN}[09]${NC} • CEK-TRAFIK${NC}        ${CYAN}[15]${NC} • SPEEDTEST${NC}"
+echo -e " ${CYAN}[04]${NC} • TROJAN${NC}   ${CYAN}[10]${NC} • CEK BANDWIDTH${NC}     ${CYAN}[16]${NC} • INFO${NC}"
+echo -e " ${CYAN}[05]${NC} • SSWS ${NC}    ${CYAN}[11]${NC} • UPDATE-SCRIPT${NC}     ${CYAN}[17]${NC} • CLEARLOG${NC}"
+echo -e " ${CYAN}[06]${NC} • ADD-HOST${NC} ${CYAN}[12]${NC} • RESTART SERVICE${NC}   ${CYAN}[18]${NC} • REBOOT${NC}"
 echo -e "$COLOR1└────────────────────────────────────────────────────────────┘${NC}"
 echo -e " [X]${NC} • [PRESS X TO EXIT]"
 echo -e ""
@@ -128,19 +127,18 @@ case $opt in
 4) clear ; menut ;;
 5) clear ; menus ;;
 6) clear ; add-host ;;
-7) clear ; genssl ;;
-8) clear ; rm -rf /usr/local/sbin/helium && wget -q -O /usr/local/sbin/helium https://raw.githubusercontent.com/abidarwish/helium/main/helium.sh && chmod +x /usr/local/sbin/helium && helium ;;
-9) clear ; helium ;;
-10) clear ; cek-trafik ;;
-11) clear ; cek-bandwidth ;;
-12) clear ; updatsc ;;
-13) clear ; restartsc ;;
-14) clear ; domaingratis ;;
-15) clear ; running ;;
-16) clear ; cek-speed ;;
-17) clear ; cat /root/log-install.txt ;;
-18) clear ; clearlog ;;
-19) clear ; reboot ;;
+7) clear ; rm -rf /usr/local/sbin/helium && wget -q -O /usr/local/sbin/helium https://raw.githubusercontent.com/abidarwish/helium/main/helium.sh && chmod +x /usr/local/sbin/helium && helium ;;
+8) clear ; helium ;;
+9) clear ; cek-trafik ;;
+10) clear ; cek-bandwidth ;;
+11) clear ; updatsc ;;
+12) clear ; restartsc ;;
+13) clear ; domaingratis ;;
+14) clear ; running ;;
+15) clear ; cek-speed ;;
+16) clear ; cat /root/log-install.txt ;;
+17) clear ; clearlog ;;
+18) clear ; reboot ;;
 0) clear ; menu ;;
 x) exit ;;
 *) clear ; menu ;;
