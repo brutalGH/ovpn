@@ -18,10 +18,10 @@ chmod +x /usr/local/bin/ws-stunnel
 
 
 #System OpenSSH Websocket-SSH Python
-wget -O /etc/systemd/system/service-wsopenssh.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsopenssh.service && chmod +x /etc/systemd/system/service-wsopenssh.service
+wget -O /etc/systemd/system/ws-openssh.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsopenssh.service && chmod +x /etc/systemd/system/ws-openssh.service
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/service-wsdropbear.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsdropbear.service && chmod +x /etc/systemd/system/service-wsdropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/service-wsdropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/brutalGh/ovpn/main/insshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
@@ -34,14 +34,14 @@ wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com
 systemctl daemon-reload
 
 #Enable & Start & Restart ws-openssh service
-systemctl enable service-wsopenssh.service
-systemctl start service-wsopenssh.service
-systemctl restart service-wsopenssh.service
+systemctl enable ws-openssh.service
+systemctl start ws-openssh.service
+systemctl restart ws-openssh.service
 
 #Enable & Start & Restart ws-dropbear service
-systemctl enable service-wsdropbear.service
-systemctl start service-wsdropbear.service
-systemctl restart service-wsdropbear.service
+systemctl enable ws-dropbear.service
+systemctl start ws-dropbear.service
+systemctl restart ws-dropbear.service
 
 #Enable & Start & Restart ws-openssh service
 systemctl enable ws-stunnel.service
